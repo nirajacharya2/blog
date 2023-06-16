@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-git clone git@github.com:JankariTech/blog.git
+git clone https://github.com/JankariTech/blog.git
 cd blog
 pnpm install
 BASE_DIR="home/runner/work/blog"
