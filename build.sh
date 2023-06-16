@@ -21,12 +21,5 @@ git checkout ${DIST_BRANCH}
 rm -rf docs
 mv "${BASE_DIR}"/temp/docs .
 
-if [ -n "$(git status --porcelain)" ]; then
-  echo "blog.jankaritech.com" > docs/CNAME
-  git add .
-  git -c user.name="JT Action Bot" -c user.email="info@jankaritech.com" commit -m "Update the build code"
-  git push origin ${DIST_BRANCH}
-fi
-
 rm -rf "${BASE_DIR}""/temp"
 echo "Deploying Completed"
